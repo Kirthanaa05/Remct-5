@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from 'react-router-dom';
 import { login, getUser } from "../utils/auth";
 import './Login.css'
 const Login = ({ onLogin }) => {
@@ -34,7 +35,7 @@ const Login = ({ onLogin }) => {
             <p style={{textDecoration:'underline'}}>Forget Password</p>
           </div>
           <button onClick={handleLogin}>Login</button>
-          <p>Don't have an account? <a href="/Signup" className="create-account">Create one</a></p>
+          <p>Don't have an account? <Link to="/signup" className="create-account">Create one</Link></p>
           <p>Or Login with</p>
           <div className="social">
             <span style={{color:"#f51585"}}>Facebook</span>
